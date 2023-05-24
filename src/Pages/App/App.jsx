@@ -1,31 +1,38 @@
+import { ChakraProvider } from '@chakra-ui/react'
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
-import AuthPage from '../AuthPage/AuthPage';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
-import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
+import AuthPage from '../AuthPage/AuthPage';
+import HomePage from '../HomePage/HomePage';
+import PostHistoryPage from '../PostHistoryPage/PostHistoryPage';
+import NewPostPage from '../NewPostPage/NewPostPage';
+import NavBar from '../../components/NavBar/NavBar';
 
-function App() {
+export default function App() {
   const [user, setUser] = useState(getUser());
+  const [posts, setPost] = useState([])
+
 
   return (
+    <ChakraProvider className="App">
     <main className="App">
       { user ?
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* Route components in here */}
-            <Route path="/orders/new" element={<NewOrderPage />} />
-            <Route path="/orders" element={<OrderHistoryPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/posts" element={<PostHistoryPage user={user} />} />
+            <Route path="/posts/new" element={<NewPostPage user={user} />} />
           </Routes>
         </>
         :
         <AuthPage setUser={setUser} />
       }
     </main>
+    </ChakraProvider>
+
   );
 }
 
-export default App;
