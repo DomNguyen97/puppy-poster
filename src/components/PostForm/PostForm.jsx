@@ -14,13 +14,13 @@ export default function PostForm() {
   });
 
   const navigate = useNavigate();
-  
+
   const handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
-      await createPost(post); 
-
-      navigate("/posts"); 
+      console.log("POST FORM HERE")
+      await createPost(post);
+      // navigate( "/");
     } catch (error) {
       console.error(error);
     }
@@ -43,8 +43,8 @@ export default function PostForm() {
             type="text"
             placeholder=''
             id="user"
-            name="content"
-            value={post.name}
+            name="user"
+            value={post.user}
             onChange={handleChange}
           />
           <FormLabel htmlFor="Content">Content:</FormLabel>
@@ -52,9 +52,9 @@ export default function PostForm() {
             mb={6} mr={6}
             type="text"
             placeholder=''
-            id="name"
+            id="content"
             name="content"
-            value={post.name}
+            value={post.content}
             onChange={handleChange}
           />
             <FormLabel htmlFor="location">Location:</FormLabel>

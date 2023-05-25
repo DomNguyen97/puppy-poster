@@ -12,10 +12,8 @@ const postsSchema = new Schema({
     imageUrl: {
         type: String,
     },
-    user: {
-      type: Schema.Types.ObjectId,
-      required: true,
-      ref: 'User'
+    userName: {
+        type: String,
     }
   }, {
     timestamps: true

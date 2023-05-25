@@ -1,4 +1,5 @@
 import PostForm from "../../components/PostForm/PostForm";
+import { Container, Text } from "@chakra-ui/react";
 
 export default function NewPostPage({ user }) {
   return (

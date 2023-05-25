@@ -5,7 +5,7 @@ import { getUser } from '../../utilities/users-service';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
 import HomePage from '../HomePage/HomePage';
-import PostHistoryPage from '../PostHistoryPage/PostHistoryPage';
+import PostIndexPage from '../PostIndexPage/PostIndexPage';
 import NewPostPage from '../NewPostPage/NewPostPage';
 import NavBar from '../../components/NavBar/NavBar';
 
@@ -23,7 +23,7 @@ export default function App() {
           <Routes>
             {/* Route components in here */}
             <Route path="/" element={<HomePage />} />
-            <Route path="/posts" element={<PostHistoryPage user={user} />} />
+            <Route path="/posts" element={<PostIndexPage user={user} />} />
             <Route path="/posts/new" element={<NewPostPage user={user} />} />
           </Routes>
         </>

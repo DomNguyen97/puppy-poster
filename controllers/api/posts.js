@@ -7,29 +7,54 @@ module.exports = {
   deletePost,
   getPostById,
   getUser,
+  new: newPost,
   updatePost
 };
 
 async function getAllPosts(req, res) {
   try {
-    const posts = await Post.find().populate('user');
+    const posts = await Post.find({}).populate('user');
     res.json(posts);
   } catch (error) {
     res.status(500).json({ error: 'Failed to retrieve posts' });
   }
 };
 
+function newPost(req, res){
+  res.render("posts/new")
+}
+
+
+// // Create Post
+//  function createPost(req, res) {
+//    req.body.user = req.user._id;
+//    let post =  new Post({
+//     userName: req.body.userName,
+//     content: req.body.content,
+//     location: req.body.location,
+//     imageUrl: req.body.imageUrl,
+//     user: req.body.user,
+//    })
+//    console.log(post);
+//    post.save(function(err) {
+//     if (err) {
+//       console.log(err)
+//       return res.redirect("/posts/new")
+//     }
+//    })
+
+//  }
 // Create Post
-async function createPost(req, res) {
+async function createPost( req, res ) {
+  console.log('hit create controller')
   try {
-    const { content,location, imageUrl } = req.body;
-    const userId = req.user._id;
+    const { userName ,content,location, imageUrl } = req.body;
 
     const newPost = new Post({
       content,
       location,
       imageUrl,
-      user: userId
+      userName, 
     });
 
     const savedPost = await newPost.save();
@@ -86,27 +111,23 @@ async function getUser(req, res) {
 }
 
 // Controller function to update a drink
-async function updateDrink(req, res) {
+async function updatePost(req, res) {
   // console.log("req", req.body)
   try {
 
-    const { name, ingredients, instructions, imageUrl, location, _id } = req.body;
-    const drinkId = _id;
-    // console.log("drinkId", drinkId); 
-    // Find the drink by ID"
-    const drink = await Drink.findByIdAndUpdate(drinkId, {
-      name,
-      ingredients,
-      instructions,
-      imageUrl,
+    const { userName, content, location, imageUrl } = req.body;
+    const postId = _id;
+    const post = await Post.findByIdAndUpdate(postId, {
+      userName,
+      content,
       location,
+      imageUrl,
     }, { new: true });
-    // console.log('drink', drink)
-    if (!drink) {
-      return res.status(404).json({ error: 'Drink not found' });
+    if (!post) {
+      return res.status(404).json({ error: 'post not found' });
     }
 
-    res.json(drink);
+    res.json(post);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Failed to update drink' });
