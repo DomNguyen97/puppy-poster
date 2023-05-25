@@ -20,7 +20,7 @@ export default function PostForm() {
     try {
       console.log("POST FORM HERE")
       await createPost(post);
-      // navigate( "/");
+      navigate( "/posts");
     } catch (error) {
       console.error(error);
     }
