@@ -3,17 +3,19 @@ import { useState, useEffect } from 'react';
 import { useGetUserID } from '../../hooks/useGetUserID';
 import * as postsAPI from '../../utilities/posts-api';
 import { Box, Container, Text } from '@chakra-ui/react';
+import { getAllPosts } from '../../utilities/posts-api';
 
 export default function PostIndexPage({ user }) {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState();
   const userID = useGetUserID();
 
   const fetchPosts = async () => {
     try {
-      const response = await postsAPI.getAllPosts();
-      const data = response.data;
+      const response = await getAllPosts();
+      // const data = response.json();
+      console.log(response);
       // const sortedPosts = data.sort((a, b) => a.name.localeCompare(b.name));
-      setPosts(data);
+      setPosts(response);
     } catch (error) {
       console.error(error);
     }
@@ -33,6 +35,7 @@ export default function PostIndexPage({ user }) {
   //     console.error(error);
   //   }
   // };
+  console.log(posts);
 
   return (
     <div>

@@ -12,9 +12,6 @@ export default function PostForm({ user }) {
     user: userId,
   });
 
-  console.log(post);
-
-
   const navigate = useNavigate();
 
   const handleSubmit = async (evt) => {

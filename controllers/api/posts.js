@@ -13,11 +13,12 @@ module.exports = {
 
 async function getAllPosts(_, res) {
   try {
-    const posts = await Post.find({}).populate({
-      path: 'user',
-      model: 'User',
-    });
-    res.json(posts);
+    // const posts = await Post.find({}).populate({
+    //   path: 'user',
+    //   model: 'User',
+    // });
+    // res.json(posts);
+    res.json(await Post.find({}))
   } catch (error) {
     res.status(500).json({ error: 'Failed to retrieve posts' });
   }
