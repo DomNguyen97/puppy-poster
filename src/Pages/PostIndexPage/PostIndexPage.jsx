@@ -25,7 +25,7 @@ export default function PostIndexPage({ user }) {
     if (!posts || posts.length === 0) {
       fetchPosts();
     }
-  }, [posts, fetchPosts]);
+  }, []);
 
   // const handleDelete = async (postId) => {
   //   try {
@@ -39,7 +39,14 @@ export default function PostIndexPage({ user }) {
 
   return (
     <div>
-      <PostList setPosts={setPosts} posts={posts} />
+       {posts?.map(item => (
+                <div>
+                    <h1> {item.content} </h1>
+                    <h1> {item.location} </h1>
+                    <img src={item.imageUrl} alt="" />
+                </div>
+            ) )}
+      {/* <PostList setPosts={setPosts} posts={posts} /> */}
     </div>
   );
 }
