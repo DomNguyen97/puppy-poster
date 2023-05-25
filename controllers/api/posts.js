@@ -11,9 +11,12 @@ module.exports = {
   updatePost
 };
 
-async function getAllPosts(req, res) {
+async function getAllPosts(_, res) {
   try {
-    const posts = await Post.find({}).populate('user');
+    const posts = await Post.find({}).populate({
+      path: 'user',
+      model: 'User',
+    });
     res.json(posts);
   } catch (error) {
     res.status(500).json({ error: 'Failed to retrieve posts' });
@@ -25,36 +28,16 @@ function newPost(req, res){
 }
 
 
-// // Create Post
-//  function createPost(req, res) {
-//    req.body.user = req.user._id;
-//    let post =  new Post({
-//     userName: req.body.userName,
-//     content: req.body.content,
-//     location: req.body.location,
-//     imageUrl: req.body.imageUrl,
-//     user: req.body.user,
-//    })
-//    console.log(post);
-//    post.save(function(err) {
-//     if (err) {
-//       console.log(err)
-//       return res.redirect("/posts/new")
-//     }
-//    })
-
-//  }
-// Create Post
-async function createPost( req, res ) {
-  console.log('hit create controller')
+// create
+async function createPost(req, res) {
   try {
-    const { userName ,content,location, imageUrl } = req.body;
+    const { content, location, imageUrl, user } = req.body;
 
     const newPost = new Post({
+      user,
       content,
       location,
       imageUrl,
-      userName, 
     });
 
     const savedPost = await newPost.save();
