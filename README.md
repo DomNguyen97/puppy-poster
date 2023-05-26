@@ -9,16 +9,17 @@
 </p>
 
 ##:camera_flash: Screenshot
-<img src="">
-<img src="">
-<img src="">
-<img src="">
-<img src="">
-<img src="">
+<img src="https://i.imgur.com/23zLS47.png">
+<img src="https://i.imgur.com/pB7e6W2.png">
+<img src="https://i.imgur.com/bLmFYxA.png">
+<img src="https://i.imgur.com/D0TiEpQ.png">
+<img src="https://i.imgur.com/D0TiEpQ.png">
+<img src="https://i.imgur.com/SmSG5rR.png">
 
 
 ##:pen: Coding languages used and technology used
-
+![Javascript]https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+![React] https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 ![Trello](https://img.shields.io/badge/-Trello-05122A?style=flat&logo=trello)
 ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
 ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
@@ -26,17 +27,16 @@
 <h3> :desktop_computer: Getting Started</h3>
 <details open>
 <ol>
-<li></li>
-<li> </li>
-<li></li>
-<li></li>
+<li>Create a profile using your name email and password on the SignUp Page</li>
+<li>Login on the Sign In Page using your email and your password.</li>
+<li>Create Post about you and your dog using some text and a photo</li> 
 </ol>
 </details>
 
 ## :notebook: What's Next?
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>like feature</li>
+<li>Comment section</li>
+<li>add gifs into your comments</li>
+<li>emojis</li>
 </ul>
