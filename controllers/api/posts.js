@@ -53,7 +53,7 @@ async function createPost(req, res) {
 // Delete Post
 async function deletePost(req, res) {
   try {
-    const PostId = req.params.id;
+    const postId = req.body.id;
 
     
     const post = await Post.findByIdAndDelete(postId);
@@ -68,6 +68,21 @@ async function deletePost(req, res) {
     res.status(500).json({ error: 'Failed to delete post' });
   }
 };
+
+// function deletePost(req, res) {
+//   const id = req.params.id
+
+//   Post.findOne({_id: id})
+//   .then(foundPost => {
+//     return Post.deleteOne(id)
+//   }) 
+//   .catch(error => console.log(error))
+  
+//   res.send("itemDelete")
+// }
+
+
+
 
 // Obtain Post ID
 async function getPostById(req, res) {

@@ -9,6 +9,7 @@ router.get("/posts", postsCtrl.getAllPosts);
 // POST /api/posts (create a user - sign up)
 router.post("/create", postsCtrl.createPost);
 
+router.delete("/posts", postsCtrl.deletePost);
 
 
 
