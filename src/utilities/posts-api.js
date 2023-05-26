@@ -12,15 +12,5 @@ export async function deletePost(postId){
     return sendRequest(`${BASE_URL}/posts`, 'DELETE', postId)
 }
 
-// export function getAllForUser() {
-//     return sendRequest(`${BASE_URL}/user`);
-// }
 
-// export function getPost(postId) {
-//     return sendRequest(`${BASE_URL}/${postId}`);
-// }
-
-// export async function deletePost(postId) {
-//     return sendRequest(`${BASE_URL}/${postId}`, 'DELETE');
-// }
 

@@ -110,26 +110,3 @@ async function getUser(req, res) {
   res.json(userPosts);
 }
 
-// // Controller function to update a drink
-// async function updatePost(req, res) {
-//   // console.log("req", req.body)
-//   try {
-
-//     const { userName, content, location, imageUrl } = req.body;
-//     const postId = _id;
-//     const post = await Post.findByIdAndUpdate(postId, {
-//       userName,
-//       content,
-//       location,
-//       imageUrl,
-//     }, { new: true });
-//     if (!post) {
-//       return res.status(404).json({ error: 'post not found' });
-//     }
-
-//     res.json(post);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: 'Failed to update drink' });
-//   }
-// };
