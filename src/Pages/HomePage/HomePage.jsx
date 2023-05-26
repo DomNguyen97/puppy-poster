@@ -1,4 +1,6 @@
+import { Center } from '@chakra-ui/react';
 import React, {useState, useEffect} from 'react'
+import './HomePage.css';
 
 function HomePage() {
   const[ dogs, setDogs ] = useState([])
@@ -7,7 +9,7 @@ function HomePage() {
 
   useEffect(() =>{
     const fetchData = () => {
-      fetch("https://dog.ceo/api/breeds/image/random/1").then((res)=> res.json()).then((res) => {
+      fetch("https://dog.ceo/api/breeds/image/random/2").then((res)=> res.json()).then((res) => {
         setDogs(res.message)
         console.log(res)
       })
@@ -21,9 +23,10 @@ function HomePage() {
   
   return (
     <div>
+      <h1>Welcome to Puppy Poster!</h1>
       {dogs.map(item => (
        <div className="container">
-        <img src={item} alt="" />
+        <img src={item} alt="dog" className='dog'  />
        </div> 
       ))}
     </div>

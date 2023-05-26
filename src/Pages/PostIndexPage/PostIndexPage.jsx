@@ -2,10 +2,9 @@ import PostList from '../../components/PostList/PostList';
 import { useState, useEffect } from 'react';
 import { useGetUserID } from '../../hooks/useGetUserID';
 import * as postsAPI from '../../utilities/posts-api';
-import { Box, Container, Text } from '@chakra-ui/react';
 import { getAllPosts } from '../../utilities/posts-api';
-import { deletePost } from "../../utilities/posts-api"
-
+import { deletePost } from "../../utilities/posts-api";
+import './PostIndexPage.css'
 
 export default function PostIndexPage({ user }) {
   const [posts, setPosts] = useState();
@@ -41,13 +40,13 @@ async function handleDelete(){
  
 
   return (
-    <div>
+    <div class='container'>
        {posts?.map(item => (
-                <div>
+                <div class='card'>
                     <h1> {item.content} </h1>
                     <h1> {item.location} </h1>
-                    <img src={item.imageUrl} alt="" />
-                    <button onClick={handleDelete}> Delete! </button>
+                    <img src={item.imageUrl} alt="" width={300} height={300} />
+                    <button onClick={handleDelete} class='btn'> Delete! </button>
                 </div>
             ) )}
       {/* <PostList setPosts={setPosts} posts={posts} /> */}

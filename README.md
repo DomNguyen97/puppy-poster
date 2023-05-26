@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+<div id="header" align="center">
+<h1>Welcome to Puppy Poster</h1>
+<img src="https://image-ie.s3.eu-west-1.amazonaws.com/uploads/2020/08/27135057/Dog-memes.jpg" width="800" height="400">
+</div>
+<h3><a href="https://github.com/SeksiBoiDom/puppy-poster">Check out Puppy Poster!</h3>
+<h1>:speech_balloon:Description</h1>
+<p>Puppy Poster is a social media application that allows users to post about there dog what they are doing or plan to do with thier animal. Users are able to sign up and sign in into the aplication where they can post text and pictures of them and thier dog.
+ This application utilizes the React Library and the MERN-Stack Infrastructure which connects the front-end and back end app development. The application also uses token-based Authentication to sign up and sign in.
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##:camera_flash: Screenshot
+<img src="">
+<img src="">
+<img src="">
+<img src="">
+<img src="">
+<img src="">
 
-## Available Scripts
 
-In the project directory, you can run:
+##:pen: Coding languages used and technology used
 
-### `npm start`
+![Trello](https://img.shields.io/badge/-Trello-05122A?style=flat&logo=trello)
+![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
+![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3> :desktop_computer: Getting Started</h3>
+<details open>
+<ol>
+<li></li>
+<li> </li>
+<li></li>
+<li></li>
+</ol>
+</details>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## :notebook: What's Next?
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
