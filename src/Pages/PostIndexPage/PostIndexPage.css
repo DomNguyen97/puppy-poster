@@ -1,0 +1,14 @@
+.card{
+    background-color: beige;
+    border-style: solid;
+    border-width: medium;
+    border-color: white;
+}
+
+.chakra-ui-light{
+    background-color: sandybrown;
+}
+
+.btn{
+    color: maroon;
+}
