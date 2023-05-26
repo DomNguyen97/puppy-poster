@@ -38,4 +38,5 @@ React, Mongoose, Express
 <li>Comment section</li>
 <li>add gifs into your comments</li>
 <li>emojis</li>
+<li>Full CRUD</li>
 </ul>
