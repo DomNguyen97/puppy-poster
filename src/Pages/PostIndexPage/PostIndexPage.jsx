@@ -28,9 +28,10 @@ export default function PostIndexPage({ user }) {
     }
   }, []);
 
-async function handleDelete(){
+async function handleDelete(postId){
   try{
-    const deletePosts = await deletePost();
+    const deletePosts = await deletePost(postId);
+    setPosts(posts.filter((post) => post._id !== postId));
     // const posts = await getAllPosts();
     // setPosts(posts);
     } catch (error){
@@ -46,7 +47,7 @@ async function handleDelete(){
                     <h1> {item.content} </h1>
                     <h1> {item.location} </h1>
                     <img src={item.imageUrl} alt="" width={300} height={300} />
-                    <button onClick={handleDelete} class='btn'> Delete! </button>
+                    <button onClick={() => handleDelete(item._id)} class='btn'> Delete! </button>
                 </div>
             ) )}
       {/* <PostList setPosts={setPosts} posts={posts} /> */}

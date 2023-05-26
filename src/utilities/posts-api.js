@@ -8,8 +8,8 @@ export async function createPost(post) {
     return sendRequest(`${BASE_URL}/create`, 'POST', post);
 }
 
-export async function deletePost(id){
-    return sendRequest(`${BASE_URL}/`, 'DELETE', id)
+export async function deletePost(postId){
+    return sendRequest(`${BASE_URL}/posts`, 'DELETE', postId)
 }
 
 // export function getAllForUser() {
